@@ -50,7 +50,7 @@ pipeline = Pipeline(stages=stages)
 train_df, test_df = df.randomSplit([0.8,0.2], seed=42)
 model = pipeline.fit(train_df)
 
-model_path = "/home/ubuntu/Employee-Attrition-Prediction/model1"
+model_path = "/home/ubuntu/Employee-Attrition-Prediction/HRAttrition_Model"
 model.write().overwrite().save(model_path)
 print(f"Modèle sauvegardé dans {model_path}")
 
